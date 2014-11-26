@@ -4,7 +4,7 @@
 
 <h1> Register ! </h1>
 
-{{ Form::open() }}
+{{ Form::open(['route' => 'register_path']) }}
 
 <!-- Username Input -->
 <div class="form-group">

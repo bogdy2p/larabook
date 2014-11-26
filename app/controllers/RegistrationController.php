@@ -12,4 +12,8 @@ class RegistrationController extends \BaseController {
 		return View::make('registration.create');
 	}
 
+        public function store()
+        {
+                return Redirect::home();
+        }
 }
