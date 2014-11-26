@@ -2,11 +2,9 @@
 
 class PagesController extends \BaseController {
 
-    public function home(){
-        
+    public function home() {
+
         return View::make('pages.home');
-        
     }
-    
-    
+
 }

@@ -9,6 +9,7 @@
     </head>
     <body>
 
+        @include('layouts.partials.nav')
 
         <div class="container">
 
