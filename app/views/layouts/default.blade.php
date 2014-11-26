@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>SiteWide Title</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/sass/main.scss" rel="stylesheet">
     </head>
     <body>
 
