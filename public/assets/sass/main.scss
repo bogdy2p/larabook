@@ -8,5 +8,10 @@ and open the template in the editor.
     Author     : pbc
 */
 
-body { padding-top: 70px; }
+body { 
+    padding-top: 70px;
+}
 
+.container h1:first-of-type {
+    margin-top: 0;
+}
