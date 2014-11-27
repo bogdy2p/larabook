@@ -15,11 +15,10 @@ use Laracasts\Commander\Events\DispatchableTrait;
 class RegisterUserCommandHandler implements CommandHandler {
 
     use DispatchableTrait;
-    
+
     /**
      * @var UserRepository
      */
-    
     protected $repository;
 
     /**
@@ -45,9 +44,9 @@ class RegisterUserCommandHandler implements CommandHandler {
         );
         //Persist user.
         $this->repository->save($user);
-        
+
         $this->dispatchEventsFor($user);
-        
+
         //Return user object.
         return $user;
     }

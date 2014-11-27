@@ -5,11 +5,12 @@ use Larabook\Registration\RegisterUserCommand;
 use Larabook\Core\CommandBus;
 
 class RegistrationController extends BaseController {
- 
+
     use CommandBus;
     /*
      * @var RegistrationForm
      */
+
     private $registrationForm;
 
     /*
@@ -18,7 +19,7 @@ class RegistrationController extends BaseController {
      * @param RegistrationForm $registrationForm
      */
 
-    function __construct( RegistrationForm $registrationForm) {
+    function __construct(RegistrationForm $registrationForm) {
 //        $this->commandBus = $commandBus;
         $this->registrationForm = $registrationForm;
     }
@@ -51,9 +52,12 @@ class RegistrationController extends BaseController {
 
         Auth::login($user);
 
-        Flash::message('Glad to have you as a new Larabook member!');
+        //Flash::message('Glad to have you as a new Larabook member!');
 
-        return Redirect::home()->with('flash_message','Welcome aboard!');
+
+        Flash::overlay('Glad to have you as a new Larabook member!');
+
+        return Redirect::home();
     }
 
 }

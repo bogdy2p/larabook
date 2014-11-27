@@ -3,7 +3,7 @@
 namespace Larabook\Users;
 
 class UserRepository {
-    
+
     /**
      * Persist a user
      * 
