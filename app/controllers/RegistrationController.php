@@ -22,6 +22,8 @@ class RegistrationController extends BaseController {
     function __construct(RegistrationForm $registrationForm) {
 //        $this->commandBus = $commandBus;
         $this->registrationForm = $registrationForm;
+        
+        $this->beforeFilter('guest');
     }
 
     /**
@@ -49,11 +51,7 @@ class RegistrationController extends BaseController {
         //Throw that command into the commandbus! (Make sure that the command bus returns our user.
         $user = $this->execute($command);
 
-
         Auth::login($user);
-
-        //Flash::message('Glad to have you as a new Larabook member!');
-
 
         Flash::overlay('Glad to have you as a new Larabook member!');
 
