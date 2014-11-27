@@ -34,8 +34,30 @@ Route::post('register', [
     'as' => 'register_path',
     'uses' => 'RegistrationController@store'
 ]);
+/*
+ * Sessions
+ */
+
+Route::get('login', [
+    'as' => 'login_path',
+    'uses' => 'SessionsController@create'
+]);
 
 
+
+
+Route::post('login', [
+    'as' => 'login_path',
+    'uses' => 'SessionsController@store',
+]);
+
+
+/**
+ * Statuses VIDEO 14 MINUTE 11:47
+ */
+
+
+Route::get('statuses', 'StatusesController@index');
 
 
 Route::get('/about', 'PagesController@about');
