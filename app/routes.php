@@ -11,6 +11,11 @@
   |
  */
 
+Event::listen('Larabook.Registration.Events.UserRegistered', function($event) {
+    dd($event);
+});
+
+
 Route::get('/', [
     'as' => 'home',
     'uses' => 'PagesController@home'
@@ -29,17 +34,6 @@ Route::post('register', [
     'as' => 'register_path',
     'uses' => 'RegistrationController@store'
 ]);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
