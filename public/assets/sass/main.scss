@@ -1,13 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Nov 26, 2014, 3:11:11 PM
-    Author     : pbc
-*/
-
 body { 
     padding-top: 70px;
 }
@@ -18,10 +8,46 @@ body {
 
 
 .nav-gravatar{
-float: left;
-position: relative;
-top: -6px;
-left: -8px;
-border: 1px solid #555;
+    float: left;
+    position: relative;
+    top: -6px;
+    left: -8px;
+    border: 1px solid #555;
+}
+
+// The "Publish Status" area
+.status-post {
+    border:1px solid #e3e3e3;
+    background: white;
+    margin-bottom: 3em;
+    padding: 0;
+
+    textarea{
+        border: 0;
+        
+        &:focus{
+            box-shadow: none;
+        }
+    }
+  // WE REMAINED AT TUTORIAL 19 - min 9:40 seconds.
+    .status-post-submit{
+        border-top: 1px solid #e9e9e9;
+        padding: .5em 1em;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    .btn {
+        float: right;
+    }
+}
+
+// Each individual status
+.status-media {
+
+    border: 1px solid #e3e3e3;
+    background: white;
+    padding: 1em;
+    margin-bottom: 2em;
 
 }

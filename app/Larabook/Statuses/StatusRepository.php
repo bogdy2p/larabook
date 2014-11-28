@@ -8,7 +8,7 @@ class StatusRepository {
 
     public function getAllForUser(User $user) {
         //return Status::all(); (this is for displaying a error @ StatusRepositoryTest
-        return $user->statuses()->get();
+        return $user->statuses()->with('user')->latest()->get();  //Same as "order by created at in descending order";
     }
 
     /**
