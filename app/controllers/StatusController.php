@@ -1,6 +1,18 @@
 <?php
 
+use Larabook\Core\CommandBus;
+use Larabook\Statuses\PublishStatusCommand;
+use Larabook\Statuses\StatusRepository;
+
 class StatusController extends \BaseController {
+
+    use CommandBus;
+
+    protected $statusRepository;
+
+    function __construct(StatusRepository $statusRepository) {
+        $this->statusRepository = $statusRepository;
+    }
 
     /**
      * Display a listing of the resource.
@@ -8,7 +20,9 @@ class StatusController extends \BaseController {
      * @return Response
      */
     public function index() {
-        return View::make('statuses.index');
+
+        $statuses = $this->statusRepository->getAllForUser(Auth::user());
+        return View::make('statuses.index', compact('statuses'));
     }
 
     /**
@@ -26,7 +40,13 @@ class StatusController extends \BaseController {
      * @return Response
      */
     public function store() {
-        //
+
+
+        $command = new PublishStatusCommand(Input::get('body'), Auth::user()->id);
+        $status = $this->execute($command);
+
+        Flash::message('Your status has been updated!');
+        return Redirect::refresh();
     }
 
     /**
