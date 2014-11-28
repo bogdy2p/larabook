@@ -58,8 +58,6 @@ Route::get('logout', [
 /**
  * Statuses VIDEO 14 MINUTE 11:47
  */
-
-
 Route::get('statuses', 'StatusController@index');
 
 
