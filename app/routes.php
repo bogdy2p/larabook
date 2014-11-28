@@ -51,13 +51,16 @@ Route::post('login', [
     'uses' => 'SessionsController@store',
 ]);
 
-
+Route::get('logout', [
+    'as' => 'logout_path',
+    'uses' => 'SessionsController@destroy',
+]);
 /**
  * Statuses VIDEO 14 MINUTE 11:47
  */
 
 
-Route::get('statuses', 'StatusesController@index');
+Route::get('statuses', 'StatusController@index');
 
 
 Route::get('/about', 'PagesController@about');
