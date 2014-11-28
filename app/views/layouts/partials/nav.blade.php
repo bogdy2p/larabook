@@ -35,8 +35,8 @@
                     </ul>
                 </li>
                 @else
-                <li> {{ link_to_route('register_path', 'Register')}}</li>
-                <li>{{ link_to_route('login_path', 'Login')}}</li>
+                <li> {{ link_to_route('register_path', 'Register')}} </li>
+                <li> {{ link_to_route('login_path', 'Login')}} </li>
 
                 @endif
             </ul>

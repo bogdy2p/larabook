@@ -47,6 +47,10 @@ class SessionsController extends \BaseController {
                    return Redirect::intended('statuses');
                 }
                 
+                // IF AUTH ATTEMPT FAILS , RETURN TO LOGIN , WITH ERRORS I THINK
+                
+                return Redirect::back()->withErrors('Username and/or Password incorrect.');
+                
                 
             
 	}

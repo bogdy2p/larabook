@@ -6,6 +6,8 @@
 <div class="col-xs-12 col-md-6">
 <h1>Sign In!</h1>
 
+@include ('layouts.partials.errors')
+
 {{ Form::open(['route' => 'login_path']) }}
     <!-- Email Form Input -->
     <div class="form-group">
