@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/larabook/tests/_support/FunctionalHelper.php</file>
-            <file>file:/var/www/html/larabook/app/views/sessions/create.blade.php</file>
-            <file>file:/var/www/html/larabook/app/routes.php</file>
-            <file>file:/var/www/html/larabook/app/controllers/SessionsController.php</file>
-            <file>file:/var/www/html/larabook/tests/functional/SignInCept.php</file>
-            <file>file:/var/www/html/larabook/app/views/registration/create.blade.php</file>
+            <file>file:/var/www/html/larabook/app/Larabook/Statuses/StatusRepository.php</file>
+            <file>file:/var/www/html/larabook/app/views/layouts/default.blade.php</file>
+            <file>file:/var/www/html/larabook/app/views/layouts/partials/nav.blade.php</file>
+            <file>file:/var/www/html/larabook/app/views/statuses/index.blade.php</file>
+            <file>file:/var/www/html/larabook/public/assets/sass/main.scss</file>
+            <file>file:/var/www/html/larabook/app/Larabook/Users/UserPresenter.php</file>
+            <file>file:/var/www/html/larabook/app/Larabook/Users/User.php</file>
         </group>
     </open-files>
 </project-private>
