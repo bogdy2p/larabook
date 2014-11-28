@@ -8,7 +8,6 @@
 
         @include ('layouts.partials.errors')
 
-
         {{ Form::open(['route' => 'register_path']) }}
 
         <!-- Username Input -->

@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Post a status</h1>
-
+   @include ('layouts.partials.errors')
     {{ Form::open() }} 
     <div class="form-group">
         {{ Form::label('body','Status:')}}
