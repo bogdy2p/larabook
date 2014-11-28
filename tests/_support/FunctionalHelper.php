@@ -13,17 +13,24 @@ class FunctionalHelper extends \Codeception\Module {
 
         $email = 'foo@example.com';
         $password = 'foo';
-        $this->haveAnAccount(compact('email','password'));
+        $this->haveAnAccount(compact('email', 'password'));
         $I = $this->getModule('Laravel4');
         $I->amOnPage('/login');
         $I->fillField('email', $email);
         $I->fillField('password', $password);
         $I->click('Sign In');
-        
+    }
+
+    public function have($model, $overrides = []) {
+        return TestDummy::create($model, $overrides);
     }
 
     public function haveAnAccount($overrides = []) {
-        TestDummy::create('Larabook\Users\User', $overrides);
+        return $this->have('Larabook\Users\User', $overrides);
+    }
+
+    public function postAStatus($overrides = []) {
+        $this->have('Larabook\Statuses\Status', $overrides);
     }
 
 }
