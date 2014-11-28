@@ -24,6 +24,9 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php"
 		],
+                "files": [
+                    "app/Larabook/helpers.php"
+                ],
                 "psr-4":{
                     "Larabook\\": "app/Larabook"
                 }
