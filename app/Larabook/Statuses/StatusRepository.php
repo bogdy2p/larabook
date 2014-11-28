@@ -7,6 +7,7 @@ use Larabook\Users\User;
 class StatusRepository {
 
     public function getAllForUser(User $user) {
+        //return Status::all(); (this is for displaying a error @ StatusRepositoryTest
         return $user->statuses()->get();
     }
 
