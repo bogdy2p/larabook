@@ -31,7 +31,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      * @var string
      */
     protected $table = 'users';
-    
     protected $presenter = 'Larabook\Users\UserPresenter';
 
     /**
@@ -77,6 +76,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 
         return $user;
+    }
+
+    /**
+     * Determine if the given user is the same
+     * as the current one.
+     * @param \Larabook\Users\User $user
+     * @return type boolean
+     */
+    public function is(User $user) {
+        return $this->username == $user->username;
     }
 
 }
