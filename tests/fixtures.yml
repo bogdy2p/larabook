@@ -7,7 +7,7 @@ Larabook\Users\User:
 
 Larabook\Statuses\Status:
     user_id:
-        type:Larabook\Users\User
+        type: Larabook\Users\User
     body: $text
     created_at: $date
     updated_at: $date
