@@ -2,11 +2,9 @@
 
 use Larabook\Forms\RegistrationForm;
 use Larabook\Registration\RegisterUserCommand;
-use Larabook\Core\CommandBus;
 
 class RegistrationController extends BaseController {
 
-    use CommandBus;
     /*
      * @var RegistrationForm
      */
@@ -42,15 +40,14 @@ class RegistrationController extends BaseController {
      */
 
     public function store() {
+        
         //Validate the form before doing anything.
         $this->registrationForm->validate(Input::all());
-        //Grab the necessary input if nothing goes wrong @ form validation
-        extract(Input::only('username', 'email', 'password'));
-        //Reference the command of registering a user
-        $command = new RegisterUserCommand($username, $email, $password);
-        //Throw that command into the commandbus! (Make sure that the command bus returns our user.
-        $user = $this->execute($command);
+        
 
+        $user = $this->execute(RegisterUserCommand::class);
+        
+        
         Auth::login($user);
 
         Flash::overlay('Glad to have you as a new Larabook member!');
