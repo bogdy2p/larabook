@@ -80,7 +80,17 @@ Route::get('@{username}', [
     'uses' => 'UsersController@show'
 ]);
 
+/**
+ * Follows
+ */
 
-Route::get('/about', 'PagesController@about');
+Route::post('follows',[
+    'as' => 'follows_path',
+    'uses' => 'FollowersController@store'
+]);
 
-Route::get('/contact', 'PagesController@contact');
+
+Route::delete('follows/{id}',[
+    'as' => 'follows_path',
+    'uses' => 'FollowersController@destroy'
+]);
