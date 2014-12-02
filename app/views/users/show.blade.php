@@ -14,8 +14,10 @@
             <div class="media-body">
                 <h1 class="media-heading">{{ $user->username }}</h1>
                 <ul class="list-inline text-muted">
-                    <li>{{ $statusCount = $user->statuses->count() }} {{ str_plural('Status', $statusCount) }}</li>
+                    
+                    <li>{{ $user->present()->statusCount }}</li>
                     <li>{{ $user->present()->followerCount }}</li>
+                    
                 </ul>
                 
             @foreach( $user->followers as $follower)
