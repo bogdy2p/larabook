@@ -15,12 +15,12 @@ $I->click('Browse Users');
 $I->seeCurrentUrlEquals('/users');
 
 
-$I->click('bogdan.popa');
+$I->click('at38');
 
-$I->seeCurrentUrlEquals('/@bogdan.popa');
-$I->click('Follow bogdan.popa');
-$I->seeCurrentUrlEquals('/@bogdan.popa');
+$I->seeCurrentUrlEquals('/@at38');
+$I->click('Follow at38');
+$I->seeCurrentUrlEquals('/@at38');
 
 
-$I->see('You are following OtherUser.');
-$I->dontSee('Follow bogdan.popa');
+$I->see('You are following at38.');
+$I->dontSee('Follow OtherUser');

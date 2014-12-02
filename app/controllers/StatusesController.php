@@ -6,13 +6,12 @@ use Larabook\Forms\PublishStatusForm;
 
 class StatusesController extends \BaseController {
 
- 
-
     /**
      *
      * @var StatusRepository
      */
     protected $statusRepository;
+
     /**
      *
      * @var PublishStatusForm
@@ -31,7 +30,7 @@ class StatusesController extends \BaseController {
      */
     public function index() {
 
-        $statuses = $this->statusRepository->getAllForUser(Auth::user());
+        $statuses = $this->statusRepository->getFeedForUser(Auth::user());
         return View::make('statuses.index', compact('statuses'));
     }
 
@@ -53,13 +52,13 @@ class StatusesController extends \BaseController {
 
         $input = Input::get();
         $input['userId'] = Auth::id();
-        
+
         $this->publishStatusForm->validate($input);
-      
+
         $this->execute(PublishStatusCommand::class, $input);
-        
-        
-        
+
+
+
         Flash::message('Your status has been updated!');
         return Redirect::back();
     }
