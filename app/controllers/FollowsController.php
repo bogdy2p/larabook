@@ -2,7 +2,7 @@
 
 use Larabook\Users\FollowUserCommand;
 
-class FollowersController extends \BaseController {
+class FollowsController extends \BaseController {
 	
     /**
 	 * Follow a user 

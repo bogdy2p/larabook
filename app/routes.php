@@ -86,11 +86,11 @@ Route::get('@{username}', [
 
 Route::post('follows',[
     'as' => 'follows_path',
-    'uses' => 'FollowersController@store'
+    'uses' => 'FollowsController@store'
 ]);
 
 
 Route::delete('follows/{id}',[
-    'as' => 'follows_path',
-    'uses' => 'FollowersController@destroy'
+    'as' => 'follow_path',
+    'uses' => 'FollowsController@destroy'
 ]);

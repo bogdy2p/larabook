@@ -23,7 +23,7 @@ class FollowUserCommandHandler implements CommandHandler {
         
         $user = $this->userRepo->findById($command->userId);
         
-        $this->userRepo->follow($comman->userIdToFollow, $user);
+        $this->userRepo->follow($command->userIdToFollow, $user);
         
         return $user;
     }
